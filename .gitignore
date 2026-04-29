@@ -1,18 +1,110 @@
-# This .gitignore is appropriate for repositories deployed to GitHub Pages and using
-# a Gemfile as specified at https://github.com/github/pages-gem#conventional
+# ============================================================================
+# .gitignore for SQL Mini Project
+# Purpose: Exclude files that shouldn't be version controlled
+# ============================================================================
 
-# Basic Jekyll gitignores (synchronize to Jekyll.gitignore)
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+# Operating System Files
+# ============================================================================
+.DS_Store
+Thumbs.db
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
 
-# Additional Ruby/bundler ignore for when you run: bundle install
-/vendor
+# IDE and Editor Files
+# ============================================================================
+*.sublime-project
+*.sublime-workspace
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+*.class
+*.log
 
-# Specific ignore for GitHub Pages
-# GitHub Pages will always use its own deployed version of pages-gem
-# This means GitHub Pages will NOT use your Gemfile.lock and therefore it is
-# counterproductive to check this file into the repository.
-# Details at https://github.com/github/pages-gem/issues/768
-Gemfile.lock
+# Database Backups and Exports
+# ============================================================================
+# Keep main SQL files but exclude backups
+*.backup
+*.bak
+*.sql.bak
+*.sql.backup
+dump-*.sql
+backup-*.sql
+*.gz
+*.zip
+*.rar
+
+# Temporary and Cache Files
+# ============================================================================
+.cache/
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Environment and Configuration Files (with sensitive data)
+# ============================================================================
+# Uncomment if you have config files with passwords
+# .env
+# config.local.sql
+# credentials.sql
+# secrets.sql
+
+# OS-specific temporary files
+# ============================================================================
+.DS_Store
+Thumbs.db
+*.lock
+
+# Python Files (if running scripts against this DB)
+# ============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Node Files (if using node-based tools)
+# ============================================================================
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Documentation Build Files
+# ============================================================================
+site/
+dist/
+build/
+
+# Local Development Files
+# ============================================================================
+.local/
+local_config.sql
+test_data.sql
+debug.log
+
+# MySQL Workbench Files
+# ============================================================================
+*.mwb.bak
+*.bak
+
+# Exclude but keep documentation
+# ============================================================================
+# !README.md
+# !SCHEMA.md
+# !*.sql
+
+# ============================================================================
+# NOTES:
+# - Keep: README.md, SCHEMA.md, DataInsertionQueries.sql, miniproject_solutions.sql
+# - Exclude: Personal configs, credentials, temporary files, OS files
+# ============================================================================
